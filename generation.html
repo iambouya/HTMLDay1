@@ -1,0 +1,38 @@
+<html>
+
+<body>
+  <button onclick="generate()">Generate Multiplication Table</button>
+
+  <ul id="table"></ul>
+
+  <script>
+    function generate() {
+      let selectedNum = prompt("Number", 2);
+
+      if (isNaN(selectedNum)) {
+        return alert("Please enter number 2 - 1000000");
+      }
+
+      let num = parseInt(selectedNum);
+
+      if (num < 2 || num > 1000000) {
+        return alert("Please enter number 2 - 1000000");
+      }
+      create(num)
+
+    }
+
+    function create(num) {
+      let ele = document.getElementById("table")
+      ele.innerHTML = "";
+      for (let i = 1; i <= 100; i++) {
+        let line = document.createElement("li");
+        line.append(num + " x " + i + " = ")
+        line.append(num * i)
+        ele.appendChild(line);
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <body>
+      <button onclick="helloworld()">Helloworld</button>
+      
+      <button onclick="showMyWords()">Show my words</button>
+
+      <button onclick="beConvert()">Concert Year to B.E</button> 
+
+      <script>
+         function helloworld() {
+             alert("helloworld")
+         }
+          
+         function showMyWords() {
+             alert("showMyWords")
+         }
+
+         function beConvert() {
+             let engYear = prompt("Enter Eng Year", 2023);
+             let beYear = parseInt(engYear) + 543;
+             alert("B.E Year = " + beYear);
+         }
+
+      </script>
+    </body>
+</html>
